@@ -1,1 +1,8 @@
-Readme: :D
+Readme: quick
+
+port: 33333
+-p 33333:33333
+
+folder: /root/deezmix\ Music 
+
+-v yourlocation:/root/deezmix\ Music 
