@@ -41,7 +41,10 @@ RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && 
     rm -rfv $DEEMIX_HOME/.git
 
 RUN pip install -r $DEEMIX_HOME/requirements.txt
-RUN python $DEEMIX_HOME/server.py
+
+CMD ["python", "$DEEMIX_HOME/server.py"]
+# does not work
+#RUN python $DEEMIX_HOME/server.py
 
 
 
