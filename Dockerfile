@@ -33,3 +33,15 @@ RUN pip install --upgrade pip && pyenv rehash
 # Clean
 RUN rm -rf ~/.cache/pip
 
+#works until here
+RUN mkdir -p /root/.config/deemix/ 
+ARG DEEMIX_HOME=/root/.config/deemix/
+
+RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
+    rm -rfv $DEEMIX_HOME/.git
+
+RUN pip install -r $DEEMIX_HOME/requirements.txt
+RUN python $DEEMIX_HOME/server.py
+
+
+
