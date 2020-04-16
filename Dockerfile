@@ -45,7 +45,13 @@ ENV DEEMIX_HOME=/root/.config/deemix/
 ARG DEEMIX_HOME=/root/.config/deemix/
 RUN export DEEMIX_HOME
 
-ENTRYPOINT ["/root/start.sh"]
+
+#second test
+RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
+    rm -rfv $DEEMIX_HOME/.git
+RUN pip install -r $DEEMIX_HOME/requirements.txt
+RUN /usr/bin/nohup python $DEEMIX_HOME/server.py
+
 
 
 
@@ -55,6 +61,6 @@ ENTRYPOINT ["/root/start.sh"]
 #    rm -rfv $DEEMIX_HOME/.git
 #RUN pip install -r $DEEMIX_HOME/requirements.txt
 #RUN python $DEEMIX_HOME/server.py
-
+#ENTRYPOINT ["/root/start.sh"]
 
 
