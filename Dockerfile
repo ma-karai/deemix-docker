@@ -47,15 +47,15 @@ RUN export DEEMIX_HOME
 
 #works until here
 
-RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
-    rm -rfv $DEEMIX_HOME/.git
+#RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
+#    rm -rfv $DEEMIX_HOME/.git
 
 
 #RUN pip install -r $DEEMIX_HOME/requirements.txt
 #ENTRYPOINT ["/root/start.sh"]
 
 # does not work
-CMD ["python", "$DEEMIX_HOME/server.py"]
+#CMD ["python", "$DEEMIX_HOME/server.py"]
 #RUN python $DEEMIX_HOME/server.py
 
 
