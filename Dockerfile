@@ -17,8 +17,10 @@ RUN apk add --no-cache --update \
 
 # Set Python version
 ARG PYTHON_VERSION='3.7.0'
+RUN export PYTHON_VERSION
 # Set pyenv home
 ARG PYENV_HOME=/root/.pyenv
+RUN export PYENV_HOME
 
 # Install pyenv, then install python versions
 RUN git clone --depth 1 https://github.com/pyenv/pyenv.git $PYENV_HOME && \
@@ -38,20 +40,22 @@ RUN chmod +x  /root/start.sh
 
 
 RUN mkdir -p /root/.config/deemix/ 
-ARG DEEMIX_HOME=/root/.config/deemix/
 
+ENV DEEMIX_HOME=/root/.config/deemix/
+ARG DEEMIX_HOME=/root/.config/deemix/
+RUN export DEEMIX_HOME
 
 #works until here
 
-#RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
-#    rm -rfv $DEEMIX_HOME/.git
+RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
+    rm -rfv $DEEMIX_HOME/.git
 
 
 #RUN pip install -r $DEEMIX_HOME/requirements.txt
 #ENTRYPOINT ["/root/start.sh"]
 
 # does not work
-#CMD ["python", "$DEEMIX_HOME/server.py"]
+CMD ["python", "$DEEMIX_HOME/server.py"]
 #RUN python $DEEMIX_HOME/server.py
 
 
