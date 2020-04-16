@@ -45,6 +45,9 @@ ENV DEEMIX_HOME=/root/.config/deemix/
 ARG DEEMIX_HOME=/root/.config/deemix/
 RUN export DEEMIX_HOME
 
+
+CMD ["python", "$DEEMIX_HOME/server.py"]
+
 #works until here
 
 #RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
@@ -55,7 +58,7 @@ RUN export DEEMIX_HOME
 #ENTRYPOINT ["/root/start.sh"]
 
 # does not work
-#CMD ["python", "$DEEMIX_HOME/server.py"]
+
 #RUN python $DEEMIX_HOME/server.py
 
 
