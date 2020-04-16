@@ -43,8 +43,8 @@ ARG DEEMIX_HOME=/root/.config/deemix/
 RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
     rm -rfv $DEEMIX_HOME/.git
 
-RUN pip install -r $DEEMIX_HOME/requirements.txt
 
+#RUN pip install -r $DEEMIX_HOME/requirements.txt
 #ENTRYPOINT ["/root/start.sh"]
 
 # does not work
