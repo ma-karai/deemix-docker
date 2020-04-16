@@ -36,12 +36,15 @@ RUN rm -rf ~/.cache/pip
 COPY start.sh /root/start.sh
 RUN chmod +x  /root/start.sh
 
-#works until here
+
 RUN mkdir -p /root/.config/deemix/ 
 ARG DEEMIX_HOME=/root/.config/deemix/
 
-RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
-    rm -rfv $DEEMIX_HOME/.git
+
+#works until here
+
+#RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
+#    rm -rfv $DEEMIX_HOME/.git
 
 
 #RUN pip install -r $DEEMIX_HOME/requirements.txt
