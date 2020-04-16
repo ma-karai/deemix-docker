@@ -45,7 +45,7 @@ RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && 
 
 RUN pip install -r $DEEMIX_HOME/requirements.txt
 
-ENTRYPOINT ["/root/start.sh"]
+#ENTRYPOINT ["/root/start.sh"]
 
 # does not work
 #CMD ["python", "$DEEMIX_HOME/server.py"]
