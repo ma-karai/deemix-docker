@@ -50,7 +50,7 @@ RUN export DEEMIX_HOME
 RUN git clone --depth 1 https://notabug.org/RemixDev/deemix.git $DEEMIX_HOME && \
     rm -rfv $DEEMIX_HOME/.git
 RUN pip install -r $DEEMIX_HOME/requirements.txt
-RUN /usr/bin/nohup python $DEEMIX_HOME/server.py
+#RUN /usr/bin/nohup python $DEEMIX_HOME/server.py
 
 
 
