@@ -63,4 +63,6 @@ RUN pip install -r $DEEMIX_HOME/requirements.txt
 #RUN python $DEEMIX_HOME/server.py
 ENTRYPOINT ["/root/start.sh"]
 
+EXPOSE 33333
+
 
