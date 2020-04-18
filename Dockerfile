@@ -61,6 +61,6 @@ RUN pip install -r $DEEMIX_HOME/requirements.txt
 #    rm -rfv $DEEMIX_HOME/.git
 #RUN pip install -r $DEEMIX_HOME/requirements.txt
 #RUN python $DEEMIX_HOME/server.py
-#ENTRYPOINT ["/root/start.sh"]
+ENTRYPOINT ["/root/start.sh"]
 
 
