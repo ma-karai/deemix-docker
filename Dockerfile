@@ -53,7 +53,7 @@ RUN pip install -r $DEEMIX_HOME/requirements.txt
 #RUN /usr/bin/nohup python $DEEMIX_HOME/server.py
 
 RUN \
-	 echo "************ customize deezloader ************" && \
+     echo "************ customize deezloader ************" && \
      sed -i "s/\"trackNameTemplate\": \"%artist% - %title%\"/\"trackNameTemplate\": \"%disc%%number% - %title% %explicit%\"/g" "$DEEMIX_HOME/deemix/app/default.json" && \
      sed -i "s/\"albumTrackNameTemplate\": \"%number% - %title%\"/\"albumTrackNameTemplate\": \"%disc%%number% - %title% %explicit%\"/g" "$DEEMIX_HOME/deemix/app/default.json" && \
      sed -i "s/\"createAlbumFolder\": true/\"createAlbumFolder\": false/g" "$DEEMIX_HOME/deemix/app/default.json" && \
