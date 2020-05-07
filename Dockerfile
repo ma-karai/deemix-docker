@@ -56,7 +56,7 @@ RUN \
      echo "************ customize deezloader ************" && \
      sed -i "s/\"trackNameTemplate\": \"%artist% - %title%\"/\"trackNameTemplate\": \"%disc%%number% - %title% %explicit%\"/g" "$DEEMIX_HOME/deemix/app/default.json" && \
      sed -i "s/\"albumTrackNameTemplate\": \"%number% - %title%\"/\"albumTrackNameTemplate\": \"%disc%%number% - %title% %explicit%\"/g" "$DEEMIX_HOME/deemix/app/default.json" && \
-     sed -i "s/\"createAlbumFolder\": true/\"createAlbumFolder\": false/g" "$DEEMIX_HOME/deemix/app/default.json" && \
+     # sed -i "s/\"createAlbumFolder\": true/\"createAlbumFolder\": false/g" "$DEEMIX_HOME/deemix/app/default.json" && \
      sed -i "s/\"embeddedArtworkSize\": 800/\"embeddedArtworkSize\": 1400/g" "$DEEMIX_HOME/deemix/app/default.json" && \
      sed -i "s/\"localArtworkSize\": 1000/\"localArtworkSize\": 1400/g" "$DEEMIX_HOME/deemix/app/default.json" && \
      sed -i "s/\"queueConcurrency\": 3/\"queueConcurrency\": 6/g" "$DEEMIX_HOME/deemix/app/default.json" && \
