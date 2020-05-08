@@ -7,5 +7,4 @@ echo "server.py start"
 #pip install -r $DEEMIX_HOME/requirements.txt
 
 
-/usr/bin/nohup python $DEEMIX_HOME/server.py | tee "$DEEMIX_HOME/nohup.out > /proc/1/fd/1 2>/proc/1/fd/2
-
+/usr/bin/nohup python $DEEMIX_HOME/server.py 2>&1 | tee "$DEEMIX_HOME/nohup.out > /proc/1/fd/1 2>/proc/1/fd/2
