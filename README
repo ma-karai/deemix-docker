@@ -1,8 +1,5 @@
 Readme: quick
 
-port: 33333
--p 33333:33333
+``` docker run -p 33333:33333 -v yourlocation:/root/deezmix\ Music  makarai/deemix-docker ```
 
-folder: /root/deezmix\ Music 
 
--v yourlocation:/root/deezmix\ Music 
