@@ -84,6 +84,6 @@ RUN \
 #RUN python $DEEMIX_HOME/server.py
 ENTRYPOINT ["/root/start.sh"]
 
-EXPOSE 33333
+EXPOSE 9666
 
 
